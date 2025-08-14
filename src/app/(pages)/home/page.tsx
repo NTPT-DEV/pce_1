@@ -1,15 +1,13 @@
 import Header from "@/app/components/Header";
 import MenuButton from "@/app/components/MenuButton";
 
-
-
 interface Props {
     title: string;
     linkUrl: string;
 }
 const menuList: Props[] = [
     { title: 'ตรวจสอบวัตถุดิบ', linkUrl: '/check-materials' },
-    { title: 'บันทึกผลทดสอบก้อนปูน', linkUrl: '' },
+    { title: 'บันทึกผลทดสอบก้อนปูน', linkUrl: '/record-cement' },
     { title: 'รายงาน', linkUrl: '' },
     { title: 'คำนวนการผลิต', linkUrl: '' },
     { title: 'สั่งซื้อสินค้า', linkUrl: '' },

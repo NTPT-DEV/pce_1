@@ -23,7 +23,7 @@ const LoginForm = () => {
                     outline-none border-1  focus:border-red-300 focus:border-1 transition-all duration-200
                     " />
             </div>
-            <button className="bg-[#C00000] w-[50%] py-1 rounded-xl border-white border-2 font-[prompt] text-white mt-3 active:scale-95 transition-all duration-200"><Link href='/home'>เข้าสู่ระบบ</Link></button>
+            <button className="bg-[#C00000] w-[50%] py-1 rounded-xl border-white border-2 shadow-md font-[prompt] text-white mt-3 active:scale-95 transition-all duration-200"><Link href='/home'>เข้าสู่ระบบ</Link></button>
         </div>
     )
 }

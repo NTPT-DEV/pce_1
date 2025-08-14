@@ -1,0 +1,59 @@
+'use client'
+import Header from "@/app/components/Header"
+import HomeButton from "@/app/components/HomeButton"
+import NextBtn from "@/app/components/NextBtn"
+import PrevBtn from "@/app/components/PrevBtn"
+import SelectOption from "@/app/components/SelectOption"
+import { useState } from "react"
+
+const optionMenuSand1 = [
+    { value: 'รับเข้า', option: 'รับเข้า' },
+    { value: 'ก่อนผลิต', option: 'ก่อนผลิต' },
+]
+const optionMenuSand2 = [
+    { value: 'ทราย (ทั่วไป)', option: 'ทราย (ทั่วไป)' },
+    { value: 'หินฝุ่น (ทดแทนทราย)', option: 'หินฝุ่น (ทดแทนทราย)' },
+]
+
+
+const CheckSandPage = () => {
+
+        const [valueSand1, setValueSand1] = useState(optionMenuSand1[0].value);
+        const [valueSand2, setValueSand2] = useState(optionMenuSand2[0].value);
+  return (
+        <div className="flex flex-col min-h-screen w-full items-center justify-between">
+            <Header />
+            <div className="flex-1 w-full flex flex-col items-center mt-2 ">
+                <div
+                    className="w-[80%] h-16 flex justify-center items-center gap-2 py-7 rounded-2xl mb-5 bg-red-700
+          border-4 border-white drop-shadow-md">
+                    <h1 className="text-white text-2xl font-[prompt]">ตรวจสอบทราย</h1>
+                </div>
+                <h1 className="text-red-700 text-2xl font-[prompt] font-semibold">รายการตรวจสอบ</h1>
+                <div className="flex flex-col w-full gap-2 justify-center items-center mt-7">
+                    <div className="flex flex-col justify-center items-center w-full gap-3">
+                        <SelectOption
+                            value={valueSand1}
+                            options={optionMenuSand1}
+                            onChange={setValueSand1}
+                        />
+                        <SelectOption
+                            value={valueSand2}
+                            options={optionMenuSand2}
+                            onChange={setValueSand2}
+                        />
+                    </div>
+                </div>
+
+            </div>
+            <div className="flex flex-col w-full justify-center items-center">
+                <div className="flex w-[80%] gap-3">
+                    <PrevBtn link={'/check-materials'} />
+                    <NextBtn link={'/check-materials/check-sand/check-sand-import'} />
+                </div>
+                <HomeButton />
+            </div>
+        </div>
+  )
+}
+export default CheckSandPage

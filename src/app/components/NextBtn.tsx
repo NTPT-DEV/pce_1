@@ -1,0 +1,18 @@
+import { ArrowBigRight } from "lucide-react"
+import Link from "next/link"
+import {motion} from 'motion/react'
+const NextBtn = ({link} : {link : string}) => {
+    return (
+        <Link href={link} className="flex justify-center w-full">
+            <motion.div
+              initial={{ opacity: 0, x: 10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="w-full h-12 flex justify-center items-center gap-2 rounded-2xl bg-red-700 border-4 border-white drop-shadow-md">
+                <h1 className="text-white text-xl font-[prompt]">ถัดไป</h1>
+                <ArrowBigRight className="text-white" width={25} height={25} />
+            </motion.div>
+        </Link>
+    )
+}
+export default NextBtn

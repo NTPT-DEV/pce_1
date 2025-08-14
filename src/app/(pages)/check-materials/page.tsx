@@ -1,15 +1,15 @@
-import Link from "next/link"
+
 import Header from "../../components/Header"
 import HomeButton from "../../components/HomeButton"
 import MenuButton from "../../components/MenuButton";
 
 interface Props {
-  title :string ;
-  linkUrl : string ;
+  title: string;
+  linkUrl: string;
 }
-const checkMaterialsMenu : Props[]= [
-  {title : 'ตรวจสอบหิน' , linkUrl : ''},
-  {title : 'ตรวจสอบทราย' , linkUrl : ''},
+const checkMaterialsMenu: Props[] = [
+  { title: 'ตรวจสอบหิน', linkUrl: '/check-materials/check-rock' },
+  { title: 'ตรวจสอบทราย', linkUrl: '/check-materials/check-sand' },
 ];
 
 const CheckMaterialsPage = () => {
@@ -23,11 +23,12 @@ const CheckMaterialsPage = () => {
           <h1 className="text-white text-2xl font-[prompt]">ตรวจสอบวัตถุดิบ</h1>
         </div>
         <h1 className="text-red-700 text-2xl font-[prompt] font-semibold">รายการตรวจสอบ</h1>
-            <div className="flex flex-col w-full gap-2 justify-center items-center mt-7">
-              {checkMaterialsMenu.map((item , index)=> (
-                <MenuButton key={item.title} index={index} {...item}/>
-              ))}
-            </div>
+        <div className="flex flex-col w-full gap-2 justify-center items-center mt-7">
+          {checkMaterialsMenu.map((item, index) => (
+            <MenuButton key={item.title} index={index} {...item} />
+          ))}
+        </div>
+
       </div>
       <HomeButton />
     </div>
