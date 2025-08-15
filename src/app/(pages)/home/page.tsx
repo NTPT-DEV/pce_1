@@ -8,7 +8,7 @@ interface Props {
 const menuList: Props[] = [
     { title: 'ตรวจสอบวัตถุดิบ', linkUrl: '/check-materials' },
     { title: 'บันทึกผลทดสอบก้อนปูน', linkUrl: '/record-cement' },
-    { title: 'รายงาน', linkUrl: '' },
+    { title: 'รายงาน', linkUrl: '/report' },
     { title: 'คำนวนการผลิต', linkUrl: '' },
     { title: 'สั่งซื้อสินค้า', linkUrl: '' },
     { title: 'แจ้งปัญหา', linkUrl: '' },
